@@ -2,6 +2,6 @@
 
 void main ( void ) {
     tty_clearVideoMemory ( ) ;
-    tty_printString ( 0x0F , "Hello, Kernel!" ) ;
+    tty_printString ( 0x00 , 0x0F , "Hello, Kernel!" ) ;
 }
 

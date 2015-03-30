@@ -6,7 +6,7 @@
 void tty_clearVideoMemory ( ) ;
 
 void tty_printMemDump     ( char* , unsigned int ) ;
-void tty_printString      ( int , char * ) ;
+void tty_printString      ( int , int , char * ) ;
 
 #endif
 

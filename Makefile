@@ -1,6 +1,9 @@
-all : xxOS.img clean
+all : build clean run
 
-xxOS.img : boot.bin kernel.bin
+run : xxOS.img
+	qemu-system-i386 xxOS.img
+
+build : boot.bin kernel.bin
 	cat boot.bin kernel.bin > xxOS.img
 
 boot.bin : src/boot/boot.asm

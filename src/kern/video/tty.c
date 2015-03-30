@@ -13,10 +13,10 @@ void tty_printMemDump ( char *ptr , unsigned int length ) {
 
 }
 
-void tty_printString ( int col , char *str ) {
+void tty_printString ( int offset , int col , char *str ) {
     char* vid = ( char* ) ADDR_TTY_VIDEO_MEMORY ;
     
-    while ( *str != 0x00 ) {
+    while ( *str != 0x00 && *vid < 80*25 ) {
         *vid = *str ;
         vid++ ;
         *vid = col ;
