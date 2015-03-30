@@ -4,7 +4,9 @@
 #define ADDR_TTY_VIDEO_MEMORY 0xB8000
 
 void tty_clearVideoMemory ( ) ;
-void tty_printString      ( int , const char * ) ;
+
+void tty_printMemDump     ( char* , unsigned int ) ;
+void tty_printString      ( int , char * ) ;
 
 #endif
 
